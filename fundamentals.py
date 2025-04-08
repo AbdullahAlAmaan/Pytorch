@@ -24,3 +24,7 @@ range=torch.arange(0,11,1) # gives the range of numbers from 0 to 10 with the st
 print(range)
 similar=torch.ones_like(range) # gives the same shape as the range tensor
 print(similar)
+float32=torch.tensor([1,2,3],dtype=torch.half , device=None # cpu gpu tpu where the tensor is located
+                     , requires_grad=False)
+float16=float32.type(torch.float64) #type conversion
+print(float16)
