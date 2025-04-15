@@ -47,8 +47,12 @@ import torch.nn as nn
 # print(some_tensor1.max())
 # print(torch.max(some_tensor1)) # can be done both ways for sum, mean,max,min
 # print(some_tensor1.argmax()) # helps to find the position where max or min is
-tensor=torch.arange(1.,11.)
+tensor=torch.rand(3,4)
 print(tensor)
 print (tensor.shape)
-tensor2=tensor.reshape(2,5) # number of rows and columns, it has to match the total elements to be compatible (multiply both and see if same as number of elements )
+tensor2=tensor.reshape(4,3) # number of rows and columns, it has to match the total elements to be compatible (multiply both and see if same as number of elements )
 print(tensor2)
+print(tensor2.size())
+# .view function is by reference, so if i initialize another variable with my tensor and make any changes there, it will change my original variable too
+stacked=torch.stack([tensor,tensor])
+print(stacked)
