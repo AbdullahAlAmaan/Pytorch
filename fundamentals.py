@@ -42,8 +42,13 @@ import torch.nn as nn
 # print(some_tensor)
 # print(some_tensor1)
 # print(matmul)
-some_tensor1=torch.rand(2,2,dtype=torch.float64)
-print(some_tensor1)
-print(some_tensor1.max())
-print(torch.max(some_tensor1)) # can be done both ways for sum, mean,max,min
-print(some_tensor1.argmax()) # helps to find the position where max or min is
+# some_tensor1=torch.rand(2,2,dtype=torch.float64)
+# print(some_tensor1)
+# print(some_tensor1.max())
+# print(torch.max(some_tensor1)) # can be done both ways for sum, mean,max,min
+# print(some_tensor1.argmax()) # helps to find the position where max or min is
+tensor=torch.arange(1.,11.)
+print(tensor)
+print (tensor.shape)
+tensor2=tensor.reshape(2,5) # number of rows and columns, it has to match the total elements to be compatible (multiply both and see if same as number of elements )
+print(tensor2)
